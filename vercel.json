@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://change:2037/api/:path*"
+      "destination": "http://uk1.airanode.cloud:25658/api/:path*"
     },
     {
       "source": "/transcripts/:path*",
-      "destination": "http://change:2037/transcripts/:path*"
+      "destination": "http://uk1.airanode.cloud:25658/transcripts/:path*"
     },
     {
       "source": "/(.*)",
