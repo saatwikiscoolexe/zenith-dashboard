@@ -17,7 +17,7 @@ export default function Announcements({ selectedGuild }) {
     if (!selectedGuild) return;
     const fetchChannels = async () => {
       try {
-        const token = localStorage.getItem('zenith_token');
+        const token = localStorage.getItem('zyntrix_token');
         const res = await fetch(`/api/guilds/${selectedGuild}/data`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -38,7 +38,7 @@ export default function Announcements({ selectedGuild }) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('zenith_token')}`
+          'Authorization': `Bearer ${localStorage.getItem('zyntrix_token')}`
         },
         body: JSON.stringify(formData)
       });
@@ -121,7 +121,7 @@ export default function Announcements({ selectedGuild }) {
               <div style={{ minWidth: '40px', height: '40px', borderRadius: '50%', background: '#5865F2', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>Z</div>
               <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '4px' }}>
-                  <span style={{ color: formData.color, fontWeight: '600', fontSize: '1.05rem' }}>Zenith</span>
+                  <span style={{ color: formData.color, fontWeight: '600', fontSize: '1.05rem' }}>Zyntrix</span>
                   <span style={{ fontSize: '0.65rem', background: '#5865F2', padding: '2px 4px', borderRadius: '3px', fontWeight: 'bold' }}>BOT</span>
                   <span style={{ color: '#949BA4', fontSize: '0.75rem' }}>Today at 12:00 PM</span>
                 </div>
