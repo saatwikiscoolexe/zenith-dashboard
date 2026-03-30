@@ -17,7 +17,7 @@ export default function PanelManager({ panels, selectedGuild, fetchDashboard }) 
     if (!selectedGuild) return;
     const fetchDiscordData = async () => {
       try {
-        const token = localStorage.getItem('zenith_token');
+        const token = localStorage.getItem('zyntrix_token');
         const res = await fetch(`/api/guilds/${selectedGuild}/data`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -64,7 +64,7 @@ export default function PanelManager({ panels, selectedGuild, fetchDashboard }) 
         method: isEdit ? 'PATCH' : 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('zenith_token')}`
+          'Authorization': `Bearer ${localStorage.getItem('zyntrix_token')}`
         },
         body: JSON.stringify(payload)
       });
@@ -86,7 +86,7 @@ export default function PanelManager({ panels, selectedGuild, fetchDashboard }) 
     try {
       await fetch(`/api/panels/${id}`, {
         method: 'DELETE',
-        headers: { 'Authorization': `Bearer ${localStorage.getItem('zenith_token')}` }
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('zyntrix_token')}` }
       });
       fetchDashboard();
     } catch (e) {
