@@ -5,7 +5,7 @@ export default function TicketArchive({ tickets, selectedGuild }) {
   const deleteTicket = async (ticketId) => {
     if (!window.confirm("Are you sure you want to permanently delete this ticket and its transcript?")) return;
     try {
-      const token = localStorage.getItem('zenith_token');
+      const token = localStorage.getItem('zyntrix_token');
       const res = await fetch(`/api/tickets/${selectedGuild}/${ticketId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
@@ -21,7 +21,7 @@ export default function TicketArchive({ tickets, selectedGuild }) {
   const deleteAllTickets = async () => {
     if (!window.confirm("Are you sure you want to delete ALL tickets in this archive? This action cannot be undone!")) return;
     try {
-      const token = localStorage.getItem('zenith_token');
+      const token = localStorage.getItem('zyntrix_token');
       const res = await fetch(`/api/tickets/${selectedGuild}/all`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
@@ -72,7 +72,7 @@ export default function TicketArchive({ tickets, selectedGuild }) {
                 <td style={{ display: 'flex', gap: '8px' }}>
                   <a 
                     className={`btn-secondary ${!t.transcriptPath ? 'disabled' : ''}`}
-                    href={t.transcriptPath ? `/api/tickets/${selectedGuild}/transcript/${t.ticketId}?token=${localStorage.getItem('zenith_token')}` : '#'}
+                    href={t.transcriptPath ? `/api/tickets/${selectedGuild}/transcript/${t.ticketId}?token=${localStorage.getItem('zyntrix_token')}` : '#'}
                     target={t.transcriptPath ? "_blank" : "_self"}
                     rel="noreferrer"
                     title={!t.transcriptPath ? "Transcript only available for closed tickets" : "View generated HTML transcript"}
