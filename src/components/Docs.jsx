@@ -7,8 +7,8 @@ export default function Docs() {
         
         {/* Header Section */}
         <div style={{ textAlign: 'center', marginBottom: '40px', paddingBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '10px', color: '#FFFFFF', fontWeight: '800' }}>Zenith <span className="text-accent">Documentation</span></h1>
-          <p style={{ color: '#949BA4', fontSize: '1.1rem' }}>Your complete guide to configuring and managing the Zenith Utility System.</p>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '10px', color: '#FFFFFF', fontWeight: '800' }}>Zyntrix <span className="text-accent">Documentation</span></h1>
+          <p style={{ color: '#949BA4', fontSize: '1.1rem' }}>Your complete guide to configuring and managing the Zyntrix Utility System.</p>
         </div>
 
         {/* Developer Credit */}
