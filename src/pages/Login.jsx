@@ -12,8 +12,8 @@ export default function Login() {
     const error = params.get('error');
 
     if (token) {
-      localStorage.setItem('zenith_token', token);
-      localStorage.removeItem('zenith_guild_id'); // FORCE PICKER ON LOGIN!
+      localStorage.setItem('zyntrix_token', token);
+      localStorage.removeItem('zyntrix_guild_id'); // FORCE PICKER ON LOGIN!
       setStatus({ type: 'success', text: 'Authentication successful! Redirecting...' });
       setTimeout(() => {
         navigate('/');
@@ -51,7 +51,7 @@ export default function Login() {
             Z
           </span>
         </div>
-        <h2 className="brand-text-glow" style={{ margin: 0, paddingBottom: '5px' }}>ZENITH</h2>
+        <h2 className="brand-text-glow" style={{ margin: 0, paddingBottom: '5px' }}>ZYNTRIX</h2>
         <p>Premium Guild Management & Automation</p>
         
         {!status ? (
